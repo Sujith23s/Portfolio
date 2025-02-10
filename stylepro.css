@@ -1,0 +1,558 @@
+body{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background: linear-gradient(black,black);
+}
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+section{
+scroll-margin-top: 100px; 
+}
+
+main .intro{
+  scroll-margin-top:300px;
+}
+
+:root{
+ --bg-color: rgb(18, 207, 240);
+}
+
+nav {
+position: fixed;
+height: 70px;
+background-color:black;
+}
+
+.navbar-nav .nav-link {
+color: white !important; 
+}
+
+nav ul{
+  margin-left: 30%;
+}
+
+nav li {
+font-size: 25px;
+padding: 15px;
+}
+
+nav a {
+position: relative;
+}
+
+nav a::before {
+content: "";
+position: absolute;
+bottom: -10px;
+left: 0;  
+width: 0;
+height: 3px;
+background-color: aqua;
+transition: all 0.5s;
+}
+
+nav a:hover::before {
+width: 100%;
+}
+
+
+#btn{
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 1px solid aqua;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 20px;
+  color:aqua;
+  box-shadow: inset  2px 2px 30px rgb(63, 120, 120);
+}
+
+#btn:hover{
+  scale: 1.1;
+  box-shadow:0 0 10px aqua;
+}
+
+.intro .data1 img{
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.intro .data{
+  width: 600px;
+  animation: moving ;
+  position: relative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+main .intro{
+  margin-top: 200px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+@keyframes moving{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+ 100%{
+   opacity: 1;
+    margin-left: 5%;
+ }
+}
+
+
+.intro #p1{
+  font-size: 50px;
+}
+.intro #p2{
+  font-size: 20px;
+}
+.intro #p3{
+ font-size: 40px;
+}
+
+#skills{
+  background-color: #090909;
+  padding-bottom:100px;
+  padding-top: 60px;
+  margin-top: 140px;
+}
+
+.skills{
+  width: 80%;
+  margin-top: 50px;
+  display: flex;
+  margin-left: 10%;
+}
+
+
+.skills .container{
+  width: 40%;
+  height: 300px;
+  border: 2px solid var(--bg-color);
+  padding: 30px;
+  padding-bottom: 20px;
+  border-radius: 30px;
+}
+
+.skills .box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.skills .card{
+  width:4rem;
+  height: 50px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.skills #tools{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skills .card img{
+  border: 1px solid white;
+}
+
+.education{
+  margin-top:50px;
+  margin-left: 25%;
+  font-weight:200;
+  word-spacing: 5px;
+}
+
+.education .content{
+  padding: 0px 30px;
+  border-left: 2px solid rgb(18, 207, 240);
+  margin-top:-10px ;
+}
+
+.education .content .para{
+  width: 700px;
+  position: relative;
+  padding: 20px;
+  border: 1px solid rgb(18, 207, 240);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.education .content .para:hover{
+  box-shadow: 0px 3px 12px 0px rgb(18, 207, 240);
+  border: 1px solid transparent;
+}
+
+.education .content .para::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 22px);
+    top:0;
+    background-color:rgb(18, 207, 240);
+    border: 2px solid rgb(18, 207, 240);
+}
+.education h2{
+  margin-left: 25%;
+  padding-bottom: 20px;
+}
+.education h3{
+  padding-bottom:15px;
+}
+.education p{
+  font-size: 20px;
+  font-weight: 400;
+}
+span{
+  color: aqua;
+}
+ 
+.aboutme{
+  background-color: #090909;
+  color: white;
+  height: 550px;
+  margin-top: 100px;
+}
+.aboutme .para{
+  width: 50%;
+  font-size: 21px; 
+  padding-top:70px;
+  margin-left: 10%;
+  animation: magic;
+  animation-timeline:view() ;
+  animation-duration: 5s;
+  animation-range: entry cover 70%;
+  animation-fill-mode: forwards;
+  
+}
+.aboutme .para p{
+  padding-top: 40px;
+  font-weight:400;    
+}
+.aboutme .para h2{
+  font-size: 50px;
+}
+
+@keyframes magic {
+  0%{
+      opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+
+  100%{
+      opacity: 1;
+  }
+}
+.project{
+  margin-top: 50px;
+}
+.project h2{
+  margin-left: 45%;
+  font-weight: 600;
+  margin-bottom: -50px;
+}
+.project .card{
+  margin-left: 15%;
+  margin-top: 100px;
+  background-color: black;
+}
+
+.project .card img{
+ height: 236px;
+ width: 300px;
+ opacity: 0.9;
+ border: 1px solid white;
+}
+
+.project .card-body{
+  border: 1px solid white;
+  width: 700px;
+}
+
+.project .btn{
+  background-color: var(--bg-color);
+  font-weight: bold;
+}
+
+footer{
+ background-color: #090909;
+ margin-top: 100px;
+ padding-bottom:1px ;
+ padding-top: 10px;
+}
+footer h5{
+  color: white;
+  margin-left: 46%;
+}
+.icons{
+  margin-left:39%;
+  display: flex;
+  column-gap: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.icons box-icon{
+ height: 40px;
+ width: 40px;
+ background-color: var(--bg-color);
+ padding:10px ;
+ border-radius: 50%;
+ }
+ .icons p{
+  color: var(--bg-color);
+  margin-top: 5px;
+ }
+
+.icons box-icon:hover{
+  box-shadow: 0 0 20px var(--bg-color);
+  scale: 1.1;
+}
+
+@media (max-width:980px){
+
+nav{
+  height: 100px;
+  background-color: black;
+}
+nav button{
+  height: 70px;
+  width: 80px;
+}
+nav li{
+  font-size: 35px;
+  margin-left:35%;
+}
+nav .container .navbar-brand span {
+  font-size: 45px;
+}
+nav ul{ 
+  margin-left: 20px;
+  background-color: black
+}
+nav a{
+  text-decoration: none;
+}
+
+main .intro{
+  display: block;
+  margin-top: 250px;
+}
+.intro .data1{
+   margin-top: 80px;
+   margin-left: 50%;
+}
+.intro .data1 img{
+  height: 700px;
+  width:700px;
+  margin-top: 50px;
+}
+.intro .data {
+ text-align: center;
+}
+.intro #btn{
+  margin-left: 47%;
+  font-weight: 500;
+  font-size: 40px;
+  width: 350px;
+}
+.intro .data #p1{
+  font-size: 75px
+}
+.intro .data #p3{
+  font-size: 55px
+}
+.intro .data #p2{
+  font-size: 40px
+}
+
+@keyframes moving{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+ 100%{
+   opacity: 1;
+    margin-left: 20%;
+ }
+}
+.intro p{
+  font-size:40px;
+  width: 900px;
+}
+.intro #p1{
+  font-size: 65px;
+  font-weight: 500;
+}
+.intro #p3{
+  font-size: 45px;
+ }
+.intro #p2{
+  font-size: 35px
+}
+#btn{
+  height: 90px;
+  width: 350px;
+  font-size: 30px;
+  font-weight: 500px;
+  margin-top:30px;
+}
+
+#skills{
+  width: 1050px;
+}
+.skills{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 80px;
+}
+.skills .container{
+  width: 800px;
+  height: 680px;
+ }
+#sk{
+  font-size: 60px;
+}
+.box .card{
+  width:180px;
+  height: 130px;
+  margin-left: 25px;
+}
+.card img{
+  height: 130px;
+  width: 180px; 
+}
+
+#img{
+  height: 130px;
+  width: 180px;
+}
+.skills #tools{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  
+}
+.skills .box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ 
+}
+.skills h3{
+  font-size: 45px;
+}
+.education{
+  margin-left: 30%;
+}
+.education .content .para{
+  width: 800px;
+}
+.education p{
+  font-size: 35px;
+}
+.education h3{
+  font-size: 35px;
+}
+#jo{
+  font-size: 60px;
+  margin-left:250px;
+  margin-top: 100px;
+}
+.aboutme{
+width: 1050px;
+height: 1000px;
+} 
+.aboutme .para{
+width: 80%;
+font-size: 37px;
+font-weight: 400;
+margin-left: 10%;
+}
+@keyframes magic {
+0%{
+    opacity: 0;
+}
+100%{
+    opacity: 1;
+    margin-left: 10%;
+}
+}
+.project h2{
+ font-size: 60px;
+ margin-left: 430px;
+ margin-bottom: -980px
+}
+.project p{
+font-size: 35px;
+}
+.project .card{
+  margin-left: 142px;
+  margin-top: 1050px;
+}
+.project .card-body{
+width: 770px;
+height: 580px;
+padding: 30px;
+box-shadow: 0 0 10px white;
+}
+.project h4{
+  font-size: 45px;
+}
+.project .card img{
+height: 600px;
+width: 770px;
+box-shadow: 0 0 10px white;
+}
+.project .btn{
+  margin-top: 30px;
+  width: 250px;
+  height: 100px;
+  font-size: 35px;
+}
+
+footer{
+width: 1050px;
+margin-top:1100px;
+padding-top: 45px;
+}
+.icon-wrap{
+margin-left: -10%;
+}
+.icon-wrap h5 {
+font-size: 45px;
+}
+.icon-wrap p{
+margin-top: 15px;
+font-size: 35px;
+}
+.icons{
+margin-left: 30%;
+}
+.icons box-icon{
+  height:80px;
+  width: 80px;
+  padding: 15px;
+  margin-left: 20px;
+}
+
+}
+
+
